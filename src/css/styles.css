@@ -84,7 +84,7 @@ body{
     background-color: var(--bdE);
     width: 100%;
     max-height: 101px;
-    margin-left: 22px;
+    margin-left: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 20px;
@@ -95,7 +95,7 @@ body{
 .hdrEsc nav, .hdrClr nav{
     display: flex;
     text-align:center;
-    width:100px;
+    width:120px;
     background-color: var(--bdE);
     border-radius: 20px;
     font-family: "Poppins", sans-serif;
@@ -103,7 +103,7 @@ body{
 
 #hdr nav a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     margin: 0 auto;
 }
@@ -112,22 +112,18 @@ body{
     text-decoration: underline;
 }
 
-.dEsc{ /*Botão de trocar a cor*/
+.dEsc, .dClr{ /*Botão de trocar a cor*/
     width: 40px;
     height: 20px;
     border-radius: 100px;
+    margin: 0px 5px;
     cursor: pointer;
     background-color: #094461;
     animation: 1s forwards;
 }
 
 .dClr{
-    width: 40px;
-    height: 20px;
-    border-radius: 100px;
-    cursor: pointer;
     background-color: #cf8638;
-    animation: 1s forwards;
 }
 
 .dEsc:hover, .dClr:hover{
@@ -157,16 +153,6 @@ body{
     width: 60%;
 }
 
-.hdrEsc nav a{
-    text-decoration: none;
-    padding-left: 5%;
-    padding-right:5%;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 auto;
-}
-
 .hdrEsc nav a:hover{
     text-decoration: underline;
 }
@@ -180,7 +166,7 @@ body{
 }
 
 .secDEsc, .secDClr{
-    width: 65%;
+    width: 90%;
     height: fit-content; 
     margin: 0 auto;
     padding: 30px;
@@ -203,6 +189,19 @@ body{
     align-items: center;
     text-align: center;
     justify-content: space-between;
+}
+
+.btnEsc, .btnClr{
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(19, 99, 119);
+    border: none;
+    margin: 0 auto;
+}
+
+.btnClr{
+    background-color: rgba(248, 144, 31);
 }
 
 .inpEsc, .inpClr{
@@ -245,6 +244,10 @@ body{
     align-items: center;
 }
 
+#liE p, #liT p, #liI p, #liL p{
+    font-size: 12px;
+}
+
 #liL{
     margin-top: -30px;
 }
@@ -257,9 +260,8 @@ body{
 }
 
 #locI{
-    width: 90px;
+    width: 100px;
     height: 55px;
-    margin-left: -8px;
 }
 
 .locMEsc, .locMClr{
@@ -400,7 +402,7 @@ body{
     text-decoration: underline;
 }
 
-@media screen and (min-width: 701px){
+@media screen and (width: 701px){
 /*Esc = escuro e Clr = claro*/
 
 .hdrEsc, .hdrClr{ /*hdr = header*/
@@ -437,7 +439,7 @@ body{
     font-size: 18px;
 }
 
-.dEsc, .dCl{    /*Botão de trocar a cor*/
+.dEsc, .dClr{    /*Botão de trocar a cor*/
     width: 20px;
     height: 20px;
     border-radius: 100px;

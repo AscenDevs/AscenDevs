@@ -18,9 +18,9 @@
     <header id="hdr" class="hdrClr">
         <img src="../img/AsDvLg.svg" alt="logo" id="imgL" class="imgClr">
         <nav id="nLk">
-            <a href="../../indexC.html" onclick="trocarPag(event)"> Início</a>
-            <a href="servicosC.html" onclick="trocarPag(event)"> Serviços</a>
-            <a href="contatosC.html" onclick="trocarPag(event)">Contate-nos</a>
+            <a href="indexC.html" onclick="trocarPag(event)"> Início</a>
+            <a href="./servicosC.html" onclick="trocarPag(event)"> Serviços</a>
+            <a href="./contatosC.html" onclick="trocarPag(event)">Contate-nos</a>
         </nav>
         <img src="../img/modoClrIco.png" id="btnC" class="dClr" onclick="trocarCor()">
     </header>
@@ -29,28 +29,30 @@
         <h1>Fale Conosco</h1>
     </div>
 
-    <form class="secDClr" id="secD" method="post" action="">
+    <form class="secDClr" id="secD" method="post" action="mailto:ascendevs25@gmail.com" enctype="text/plain">
         <div>
             <article class="atInp">
-                <p>Nome: <input type="text" placeholder="Nome" id="inpN"  class="inpClr" maxlength="60"></p>
+                <p>Nome: <input type="text" placeholder="Nome" id="inpN"  class="inpClr" maxlength="60" autocomplete="on" required></p>
             </article>
 
             <article class="atInp">
-                <p>Email: <input type="email" id="inpE" class="inpClr" maxlength="80" placeholder="Email"></p>
+                <p>Email: <input type="email" id="inpE" class="inpClr" maxlength="80" placeholder="Email" autocomplete="on" required></p>
             </article>
 
             <article class="atInp">
-                <p>Propósito: <input type="text" id="inpP" class="inpClr" maxlength="30" placeholder="Propósito"></p>
+                <p>Propósito: <input type="text" id="inpP" class="inpClr" maxlength="30" placeholder="Propósito" required></p>
             </article>
 
             <article class="atInp">
-                <p>Assunto: <textarea maxlength="200" id="inpA" class="inpAClr" placeholder="Assunto"></textarea></p>
+                <p>Assunto: <textarea maxlength="200" id="inpA" class="inpAClr" placeholder="Assunto" required></textarea></p>
             </article>
+            <input type="submit" id="btnE" class="btnClr" value="Enviar"></input>
+                <input type="reset" id="btnL" class="btnClr" value="Limpar"></input>
         </div>
     </form>
 
     <footer id="ftr" class="ftrClr">
-        <p> <a href="#hdr">Fale Conosco</a><a href="sobreC.html" onclick="trocarPag(event)">Sobre nós</a></p>
+        <p> <a href="#hdr">Fale Conosco</a><a href="./sobreC.html" onclick="trocarPag(event)">Sobre nós</a></p>
         <p>@AscenDevs 2025 Todos os direitos reservados</p>
     </footer>
     <script src="../js/script.js"></script>

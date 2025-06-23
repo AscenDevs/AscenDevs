@@ -7,7 +7,7 @@ else {
     modo = "Claro";
 }
 
-let ids = ["btnC", "bd", "hdr", "imgL", "secD", "secD2", "inpN", "inpE", "inpP", "inpA", "locM", "dProd", "secSis", "dSisH", "dSisA", "ftr"]; // Lista de ids usados
+let ids = ["btnC", "bd", "hdr", "imgL", "secD", "secD2", "inpN", "inpE", "inpP", "inpA", "btnE", "btnL", "locM", "dProd", "secSis", "dSisH", "dSisA", "ftr"]; // Lista de ids usados
 
 function trocarCor() { // Troca de modo claro e escuro
     if (modo == "Escuro") {
@@ -49,6 +49,12 @@ function trocarCor() { // Troca de modo claro e escuro
                         break;
                     case "inpA":
                         idAtual.classList.replace("inpAEsc", "inpAClr"); // Input Assunto
+                        break;
+                    case "btnE":
+                        idAtual.classList.replace("btnEsc", "btnClr"); // Botão Enviar
+                        break;
+                    case "btnL":
+                        idAtual.classList.replace("btnEsc", "btnClr"); // Botão Limpar
                         break;
                     case "locM":
                         idAtual.classList.replace("locMEsc", "locMClr"); // Mapa da localização
@@ -115,6 +121,12 @@ function trocarCor() { // Troca de modo claro e escuro
                     case "inpA":
                         idAtual.classList.replace("inpAClr", "inpAEsc");
                         break;
+                    case "btnE":
+                        idAtual.classList.replace("btnClr", "btnEsc");
+                        break;
+                    case "btnL":
+                        idAtual.classList.replace("btnClr", "btnEsc");
+                        break;
                     case "locM":
                         idAtual.classList.replace("locMClr", "locMEsc");
                         break;
@@ -150,7 +162,10 @@ function trocarPag(event) { // Para que o modo permaneça mesmo após a troca de
     let novoLink; // link para o qual o usuário será redirecionado ao clicar
 
     if (modo === "Escuro") {  // Páginas com modo escuro como padrão terminarão com ".html"
-        if (link.endsWith("C.html")) {
+        if (!window.location.href.endsWith("indexC.html") && window.location.href.endsWith("C.html") && link.endsWith("indexC.html")){ // Como o index e indexC estão em caminhos diferentes, eles são exceção à "regra" a seguir
+            novoLink = link.slice(0, larg - 20) + "index.html";
+        }
+        else if (link.endsWith("C.html")) {
             novoLink = link.slice(0, larg - 6) + ".html"; // Troca C.html por .html
         }
         else {
@@ -158,7 +173,10 @@ function trocarPag(event) { // Para que o modo permaneça mesmo após a troca de
         }
     }
     else { // Páginas com modo claro como padrão terminarão com "C.html"
-        if (!link.endsWith("C.html") && link.endsWith(".html")) {
+        if (!window.location.href.endsWith("index.html") && window.location.href.endsWith(".html") && link.endsWith("index.html")){
+            novoLink = link.slice(0, larg - 10) + "/src/html/indexC.html";
+        }
+        else if (!link.endsWith("C.html") && link.endsWith(".html")) {
             novoLink = link.slice(0, larg - 5) + "C.html"; // Troca .html por C.html
         }
         else {

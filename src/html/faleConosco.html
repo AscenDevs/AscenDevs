@@ -19,8 +19,8 @@
         <img src="../img/AsDvLg.svg" alt="logo" id="imgL" class="imgEsc">
         <nav id="nLk">
             <a href="../../index.html" onclick="trocarPag(event)">Início</a>
-            <a href="servicos.html" onclick="trocarPag(event)"> Serviços</a>
-            <a href="contatos.html" onclick="trocarPag(event)">Contate-nos</a>
+            <a href="./servicos.html" onclick="trocarPag(event)"> Serviços</a>
+            <a href="./contatos.html" onclick="trocarPag(event)">Contate-nos</a>
         </nav>
         <img src="../img/modoEscIco.png" id="btnC" class="dEsc" onclick="trocarCor()">
     </header>
@@ -29,28 +29,30 @@
         <h1>Fale Conosco</h1>
     </div>
 
-    <form class="secDEsc" id="secD" method="post" action="">
+    <form class="secDEsc" id="secD" method="post" action="mailto:ascendevs25@gmail.com" enctype="text/plain">
         <div>
             <article class="atInp">
-                <p>Nome: <input type="text" placeholder="Nome" id="inpN" class="inpEsc" maxlength="60"></p>
+                <p>Nome: <input type="text" placeholder="Nome" id="inpN" class="inpEsc" maxlength="60" autocomplete="on" required></p>
             </article>
 
             <article class="atInp">
-                <p>Email: <input type="email" id="inpE" class="inpEsc" maxlength="80" placeholder="Email"></p>
+                <p>Email: <input type="email" id="inpE" class="inpEsc" maxlength="80" placeholder="Email" autocomplete="on" required></p>
             </article>
 
             <article class="atInp">
-                <p>Propósito: <input type="text" id="inpP" class="inpEsc" maxlength="30" placeholder="Propósito"></p>
+                <p>Propósito: <input type="text" id="inpP" class="inpEsc" maxlength="30" placeholder="Propósito" required></p>
             </article>
 
             <article class="atInp">
-                <p>Assunto: <textarea maxlength="200" id="inpA" class="inpAEsc" placeholder="Assunto"></textarea></p>
+                <p>Assunto: <textarea maxlength="200" id="inpA" class="inpAEsc" placeholder="Assunto" required></textarea></p>
             </article>
+                <input type="submit" id="btnE" class="btnEsc" value="Enviar"></input>
+                <input type="reset" id="btnL" class="btnEsc" value="Limpar"></input>
         </div>
     </form>
 
     <footer id="ftr" class="ftrEsc">
-        <p> <a href="#hdr">Fale Conosco</a><a href="sobre.html" onclick="trocarPag(event)">Sobre nós</a></p>
+        <p> <a href="#hdr">Fale Conosco</a><a href="./sobre.html" onclick="trocarPag(event)">Sobre nós</a></p>
         <p>@AscenDevs 2025 Todos os direitos reservados</p>
     </footer>
     <script src="../js/script.js"></script>
